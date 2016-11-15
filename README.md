@@ -15,27 +15,27 @@
   
 3. What does your audience want to learn from your data?  Please list out at least 3 specific questions that your project will answer for your audience.
 
-  -Was there any spikes in crimes following the election
+  -Were there any spikes in crimes following the 2012 election?
   -Where does the crime occur most, what could be possible reasons why?
-  -Where is the safest place in washington
+  -Where is the safest place in Washington state?
 
 #Technical Description
 
 1. What will be the format of your final product (Shiny app, HTML page or slideshow compiled with KnitR, etc.)?
 
-  -we'd like it to be either a shiny app, or webpage
+  -We will be using the Shiny app to display our report.
 
 2. How will you be reading in your data (i.e., are you using an API, or is it a static .csv/.json file)?
 
-  This is a regular csv file
+  This is a regular csv file.
 
 3. What types of data-wrangling (reshaping, reformatting, etc.) will you need to do to your data?
 
-  We are looking to subset and filter the data.
+  We are looking to subset and filter the data according to state and city. We will then explore that dataset further, looking for trends in crime by examining variables for each instance.
 
 4. What (major/new) libraries will be using in this project (no need to list common libraries that are used in many projects such as dplyr)
 
-  `ggplot`, `plotly`, `dpylr` are the current libraries we have in mind.
+  So far, we anticipate using the libraries that we have learned in class, but we will be exploring other libraries that may prove to be beneficial to our project.
   
 5. What questions, if any, will you be answering with statistical analysis/machine learning?
 
