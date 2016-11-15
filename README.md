@@ -5,7 +5,7 @@
 1. What is the dataset you'll be working with?  Please include background on who collected the data, where you accessed it, and any additional information we should know about how this data came to be.
 
   We will be working with crimes in Washington State of the year 2012. We got our data from the http://sac.ofm.wa.gov/ washington
-  state statistical analysis center.
+  state statistical analysis center. Depending on our results we may entend the project to look at other states or nationwide.
 
 2. Who is your target audience?  Depending on the domain of your data, there may be a variety of audiences interested in using the dataset.  You should hone in on one of these audiences.
 
@@ -35,11 +35,11 @@
 
 4. What (major/new) libraries will be using in this project (no need to list common libraries that are used in many projects such as dplyr)
 
-  ggplot, plotly, dpyler are the current libraries we have in mind.
+  `ggplot`, `plotly`, `dpylr` are the current libraries we have in mind.
   
 5. What questions, if any, will you be answering with statistical analysis/machine learning?
 
-  we want to see if there is a significant difference in crime in the month of the election versus the months before and after.
+  We want to see if there is a significant difference in crime in the month of the election versus the months before and after.
   
 6. What major challenges do you anticipate? 
 
