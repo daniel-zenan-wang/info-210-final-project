@@ -45,3 +45,15 @@
 
   This will be our first project working together and applying our technical skills. I think it will be challenging learning shiny and 
   applying all the different things we learned to put together in a finished product.
+  
+  Chart 1:
+  Burgalary, Murder, assault: Total crime
+  2000-2015
+  Crimes versus years, most/least violents 
+  Crimes versus counties, total ones on a interactive map
+  Population versus counties, interactive color map
+  Summary of everything
+  
+  Description
+  
+  
