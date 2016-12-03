@@ -1,9 +1,17 @@
-install.packages(c("maps", "mapdata"))
+#install.packages(c("maps", "mapdata"))
 library(ggplot2)
 library(ggmap)
 library(maps)
 library(mapdata)
+library(dplyr)
 df <- read.csv("allData.csv")
+
+selecByYear <- function(year) {
+  dfYear <- filter(df, INDEXYEAR == year, LOCATION == 'COUNTY TOTAL')
+  return (dfYear)
+}
+
+test <- selecByYear(1994)
 
 counties <- map_data("county")
 wa_county <- subset(counties, region == "washington")
