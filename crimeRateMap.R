@@ -3,6 +3,7 @@ library(ggplot2)
 library(ggmap)
 library(maps)
 library(mapdata)
+library(dplyr)
 df <- read.csv("allData.csv")
 
 counties <- map_data("county")
