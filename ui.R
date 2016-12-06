@@ -33,9 +33,8 @@ shinyUI(fluidPage(
                # Side panel for controls
                sidebarPanel(
                  
-                 
                  # Input to select county to display trend for
-                 selectInput('county', label = 'County', choices = unique(countyTotal$COUNTY), selected = 'Sepal.Width')
+                 selectInput('county', label = 'County', choices = unique(filter(read.csv("allData.csv"), LOCATION == 'COUNTY TOTAL')$COUNTY), selected = 'Sepal.Width')
                ),
                
                # Create a main panel, in which you should display your plotly Scatter plot
@@ -43,6 +42,24 @@ shinyUI(fluidPage(
                  plotlyOutput('crimetrend')
                )
              ))
+    
+    ,
+    tabPanel("Crime Rate Map", # Create sidebar layout
+             sidebarLayout(
+               
+               # Side panel for controls
+               sidebarPanel(
+                 
+                 # Input to select county to display trend for
+                 selectInput('county', label = 'County', choices = unique(filter(read.csv("allData.csv"), LOCATION == 'COUNTY TOTAL')$COUNTY), selected = 'Sepal.Width')
+               ),
+               
+               # Create a main panel, in which you should display your plotly Scatter plot
+               mainPanel(
+                 plotlyOutput('crimetrend')
+               )
+             ))
+    
   )
   
   
