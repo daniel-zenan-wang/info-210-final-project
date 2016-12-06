@@ -4,7 +4,6 @@ library(ggplot2)
 
 df <- read.csv("allData.csv")
 countyTotal <- filter(df, LOCATION == 'COUNTY TOTAL')
-
 #input:county's name
 #output: the violent crime rate trend in specified county from 1991 to 2011 or 2015 (depends on available data)
 #Suggestion: Could use shiny to enable user to choose county's name and see the trend by the radio button or something similar.
@@ -37,3 +36,5 @@ propertyCrimeTrend <- function(county) {
     )
   return (p)
 }
+
+
