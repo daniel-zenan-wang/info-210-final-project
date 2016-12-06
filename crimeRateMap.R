@@ -4,6 +4,7 @@ library(mapdata)
 library(dplyr)
 library(RColorBrewer)
 
+buildCrimeRateMap <- function() {
 #This function returns all columns for the county total of a given year
 get.year.total <- function(year) {
   return(filter(df, INDEXYEAR == year) %>% filter(LOCATION == "COUNTY TOTAL"))
@@ -53,3 +54,4 @@ wa_base <- ggplot(data = wa_county, mapping = aes(x = long, y = lat, group = gro
   theme_bw() + #Remove gray background
   remove_axes + #Remove axes
   scale_fill_continuous(name = "Total Crime Rate") #Change name of legend
+  }
