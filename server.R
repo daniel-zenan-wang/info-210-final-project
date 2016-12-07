@@ -8,6 +8,7 @@ library(dplyr)
 
 source("PRATE_vs_VRATE_by_Year.R")
 source("violentCrimeTrend.R")
+source("popRatMap.R")
 
 # Start shinyServer
 shinyServer(function(input, output) { 
@@ -21,4 +22,20 @@ shinyServer(function(input, output) {
   output$crimetrend <- renderPlotly({ 
     p <- violentCrimeTrend(input$county)
   })
+  
+  # Render a plotly object that returns the visualization
+  output$crimetrend <- renderPlotly({ 
+    p <- violentCrimeTrend(input$county)
+  })
+  
+  # Render a map object that returns the visualization
+  output$crimemap <- renderPlot({ 
+    buildCrimeRateMap(input$ratemapyear)
+  })
+  
+  # Render a map object that returns the visualization
+  output$popmap <- renderPlot({ 
+    buildPopRateMap(input$popmapyear)
+  })
+  
 })

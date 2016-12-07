@@ -4,7 +4,7 @@ library(mapdata)
 library(dplyr)
 library(RColorBrewer)
 
-
+buildPopRateMap <- function(year) {
 #This function returns all columns for the county total of a given year
 get.year.total <- function(year) {
   return(filter(df, INDEXYEAR == year) %>% filter(LOCATION == "COUNTY TOTAL"))
@@ -15,7 +15,7 @@ counties <- map_data("county") #Get the county data
 wa_county <- subset(counties, region == "washington") #Get only washington counties
 wa_county <- mutate(wa_county, "population" = NA) #Add an empty column for crime rate
 
-totals.2000 <- get.year.total("2000") #Get total information for given year (default 2000)
+totals.2000 <- get.year.total(year) #Get total information for given year (default 2000)
 
 
 pops <- 0 #Declare population vector
@@ -54,4 +54,5 @@ wa_base <- ggplot(data = wa_county, mapping = aes(x = long, y = lat, group = gro
   theme_bw() + #Remove gray background
   remove_axes + #Remove axes
   sc
-  wa_base
+return(wa_base)
+}
