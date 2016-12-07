@@ -11,7 +11,7 @@ violentCrimeTrend <- function(county) {
   violentCrime <- select(countyTotal, COUNTY, INDEXYEAR, MURDER, RAPE, ROBBERY, ASSAULT)
   chosenCounty = filter(violentCrime, COUNTY == county)
   p <- plot_ly(chosenCounty, x = ~INDEXYEAR, y = ~MURDER, type = 'scatter', name = 'Murder', mode = 'lines', fill = 'tonexty') %>%
-    add_trace(x = ~INDEXYEAR, y = ~RAPE, name = 'Rape') %>%
+    add_trace(y = ~RAPE, name = 'Rape') %>%
     add_trace(y = ~ROBBERY, name = 'Robbery') %>%
     add_trace(y = ~ASSAULT, name = 'Assault') %>%
     layout(title = paste(county, 'Violent Crime Rate Trend'),
@@ -27,7 +27,7 @@ propertyCrimeTrend <- function(county) {
   propertyCrime <- select(countyTotal, COUNTY, INDEXYEAR, ARSON, BURGLARY, THEFT, MVTHEFT)
   chosenOne = filter(propertyCrime, COUNTY == county)
   p <- plot_ly(chosenOne, x = ~INDEXYEAR, y = ~ARSON, type = 'scatter', name = 'Arson', mode = 'lines', fill = 'tonexty') %>%
-    add_trace(x = ~INDEXYEAR, y = ~BURGLARY, name = 'Burglary') %>%
+    add_trace(y = ~BURGLARY, name = 'Burglary') %>%
     add_trace(y = ~THEFT, name = 'Theft') %>%
     add_trace(y = ~MVTHEFT, name = 'Theft of Motor Vehicle') %>%
     layout(title = paste(county, 'Property Crime Rate Trend'),
