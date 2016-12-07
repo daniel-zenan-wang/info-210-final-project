@@ -9,6 +9,7 @@ library(dplyr)
 source("PRATE_vs_VRATE_by_Year.R")
 source("violentCrimeTrend.R")
 source("popRatMap.R")
+source("crimeRateMap.R")
 
 # Start shinyServer
 shinyServer(function(input, output) { 
