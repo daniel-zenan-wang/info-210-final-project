@@ -46,8 +46,8 @@ p <- plot_ly(yearly,
     )
   ) %>%
   layout(title = paste(year, 'Property Crime Rate versus Violent Cime Rate<br />(Hover for details)'),
-         xaxis = list(title = 'Property Crime Rate(crimes committed per 1,000 residents)'),
-         yaxis = list(title = 'Violent Crime Rate(crimes committed per 1,000 residents)')
+         xaxis = list(title = 'Violent Crime Rate(crimes committed per 1,000 residents)'),
+         yaxis = list(title = 'Property Crime Rate(crimes committed per 1,000 residents)')
          )
 return (p)
 }
